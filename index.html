@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self Hosting 👑</title>
+  </head>
+  <body>
+    <canvas id="bg"></canvas>
+    <main>
+      <header>
+        <h1>Self-Hosted Three.js</h1>
+        <p>🚀 My app is self-reliant. Is yours?</p>
+      </header>
+
+      <blockquote>
+        <p>The cloud industry doesn't have to be dominated by the BIG 3</p>
+      </blockquote>
+
+      <section>
+        <h2>📜 Preface</h2>
+        <p>
+          All the cloud providers conveniently try to tell you in their
+          documentation and marketing material that self-hosting is a bad idea.
+          Cloud is often expressed as the cheap and perfect solution to all
+          hosting problems. But it's not.
+        </p>
+
+        <p>
+          2021 was probably the worst year ever for cloud uptime SLAs and in
+          most cases, you can buy a hardware equivalent of your cloud VM and
+          host it yourself, and within a few months, you would have recovered
+          your initial capital investment, when compared to the expensive cloud
+          pricing.
+        </p>
+
+        <p>
+          What I have said above is valid for most small businesses and folks
+          who are just starting out. Your apps are not going to be flooded by
+          millions of users anytime soon. And no matter how much you'd like to
+          think so, your app doesn't require a 24x7 uptime.
+        </p>
+        <p>
+          So I made this website and decided to self-host it from an old laptop
+          I had lying around.
+        </p>
+      </section>
+
+      <blockquote>
+        <p>
+          Silicon is a terrible thing to waste<br />-
+          <a href="https://github.com/sudo-vaibhav/">sudo-vaibhav</a>
+        </p>
+      </blockquote>
+
+      <section class="light">
+        <h2>🌦️ Cloudflare to the Rescue</h2>
+
+        <p>
+          Cloudflare Tunnels create an encrypted tunnel between your server and
+          the Cloudflare network using the cloudflared daemon. Because of this,
+          users won't directly connect to your server, instead they will connect
+          via proxy through Cloudflare's network.
+        </p>
+
+        <h2>🏆 Benefits</h2>
+
+        <ul>
+          <li>
+            There is no need to open any ports on your network. To the outside
+            world and even your ISP, your server just looks like any other
+            encrypted web traffic.
+          </li>
+          <li>
+            There is no need to create, buy or mange TLS certificates as
+            cloudflared handles all of this for you.
+          </li>
+          <li>
+            Cloudflare utilizes smart routing to speed up traffic latency. They
+            avoid congested network and high latency area which routing the
+            traffic through their edge network.
+          </li>
+
+          <li>You get a WAF and DDOS protection built in.</li>
+        </ul>
+      </section>
+      <blockquote>
+        <p>Please do try to DDOS!</p>
+      </blockquote>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
